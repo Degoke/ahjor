@@ -27,6 +27,10 @@ public class WebSecurityConfig {
     @Autowired
     private AuthEntryPointJwt unAuthorizedHandler;
 
+    // @Autowired
+    // @Qualifier("handlerExceptionResolver")
+    // private HandlerExceptionResolver resolver;
+
     @Bean
     public AuthTokenFilter authenticationJwtTokenFilter() {
         return new AuthTokenFilter();

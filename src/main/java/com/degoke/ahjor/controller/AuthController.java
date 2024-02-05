@@ -166,7 +166,7 @@ public class AuthController {
       @ApiResponse(responseCode = "200", content = {
         @Content(schema = @Schema(implementation = JwtResponse.class)),
       }),
-    })  
+    })
     @PostMapping("/login")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
         Authentication authentication = authenticationManager.authenticate(
@@ -197,7 +197,7 @@ public class AuthController {
       @ApiResponse(responseCode = "400", content = {
         @Content(schema = @Schema(implementation = MessageResponse.class)),
       }),
-      @ApiResponse(responseCode = "400", content = {
+    @ApiResponse(responseCode = "400", content = {
         @Content(schema = @Schema(implementation = ResourceNotFoundException.class)),
       }),
     })
